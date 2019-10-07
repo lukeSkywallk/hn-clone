@@ -1,20 +1,11 @@
-import React, {useEffect} from 'react';
-import hackerNewsApi from './api/hackerNewsApi.js';
+import React from 'react';
+import Orchestrator from './components/orchestrator';
 
 export default function App() {
 
-  useEffect(() => {
-    async function getData(){
-      hackerNewsApi.getStory(1);
-    }
-
-    getData();
-    
-  },[]);
-
   return (    
     <div className="App">
-      
+      <Orchestrator view={'best'}></Orchestrator>    
     </div>
   );
 }
